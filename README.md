@@ -1,3 +1,3 @@
-# React Questions and Answers
+# React and Javascript Questions and Answers
 ## React theory and code analysis
 
