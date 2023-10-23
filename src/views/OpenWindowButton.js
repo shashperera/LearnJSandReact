@@ -40,9 +40,9 @@ const OpenWindowButton = () => {
             <Typography variant="h5" style={styles.question}>
               Question 1:
             </Typography>
-            <Typography variant="body1">
+            { /*<Typography variant="body1">
               Explain the difference between state and props in React and answer.
-            </Typography>
+            </Typography> */}
             <List style={styles.list}>
               <ListItem>
                 <ListItemIcon>

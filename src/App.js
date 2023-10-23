@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Route and Routes
 import Navbar from './components/navbar';
 import ReactHooks from './views/ReactHooks'; // Import the ReactHooks component
-import OpenWindowButton from './components/OpenWindowButton'; // Import the OpenWindowButton component
+import OpenWindowButton from './views/OpenWindowButton'; // Import the OpenWindowButton component
 
 
 import logo from './logo.svg';
@@ -54,7 +54,8 @@ function App() {
       {!showReactHooks && !showOpenWindow && (
         <div>
           <button onClick={openReactHooks}>Open React Hooks Page</button>
-          <button onClick={openNewComponent}>Open Window Hooks Page</button>
+          <button onClick={openNewComponent}>Difference between state and props in React.
+</button>
         </div>
       )}
                 
