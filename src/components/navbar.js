@@ -33,9 +33,9 @@ const Navbar = () => {
 
             <div className={menuClass}>
                 <div className="menu">
-                    <nav>
-                        <Link to="/hooks">Hooks</Link> {/* Link to the "hooks" page */}
-                    </nav>
+
+                    <Link to="/hooks">Hooks</Link> {/* Link to the "hooks" page */}
+                    <Link to="/async">Async</Link>
                     <Link to="/about">About</Link>
                     <Link to="/contact">Contact</Link>
                     {/* Add more menu items or links here */}

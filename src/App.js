@@ -5,10 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Im
 import Navbar from './components/navbar';
 import ReactHooks from './views/ReactHooks'; // Import the ReactHooks component
 import OpenWindowButton from './views/OpenWindowButton'; // Import the OpenWindowButton component
-
-
-import logo from './logo.svg';
 import './App.css';
+import Async from './views/async';
 
 function App() {
     const [colour, setColour] = useState("Red");
@@ -44,8 +42,8 @@ function App() {
 
 
                 <Routes>
-                {/* <Route index element={<Home />} /> */}
-                    <Route path="/hooks" Component={<ReactHooks />} />
+                    <Route path="/hooks" element={<ReactHooks />} />
+                    <Route path="/async" element={<Async/>} />
                     {/* Add more routes here if needed */}
                 </Routes>
 
