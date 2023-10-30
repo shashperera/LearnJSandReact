@@ -1,12 +1,12 @@
 //1. var & let difference
-// var num = 1;
-// if (num == 1) {
-//     var test = 'inside if';
-//     let tes = 'inside if let';
-//     console.log(tes);
-// }
-// console.log(test);//inside if
-// console.log(tes);// Reference error, tes is not defined
+var num = 1;
+if (num == 1) {
+    var test = 'inside if';
+    let tes = 'inside if let';
+    console.log(tes);
+}
+console.log(test);//inside if
+console.log(tes);// Reference error, tes is not defined
 
 
 //2. var function scope and let block scope
@@ -106,4 +106,12 @@ console.log(`${car1.name} is priced at ${car1.price}`); //Rolls Royce Ghost is p
 console.log(`${car2.name}'s maker is ${car1.maker}`); //Mercedes AMG One's maker is Rolls Royce
 
 
-//7. 
+//7. this
+//this keyword is a reference to the current execution context.
+const Animal = {
+    property: 'Name',
+    myMethod: function () {
+        console.log(this.property);
+    }
+};
+Animal.myMethod(); // this refers to myObject = Name
