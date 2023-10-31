@@ -117,6 +117,7 @@ const Animal = {
 Animal.myMethod(); // this refers to myObject = Name
 
 //8. Callback function
+//Functions which are passed as an argument in another function which gets executed after a certain
 function test(arr, callback){
     arr.push(100);
     callback();
@@ -129,3 +130,17 @@ console.log(arr); //[1,4,5,100]
 test(arr,function(){
     console.log(arr+ "1") //1,4,5,1001
 });
+
+//9.String reverse
+var string = "I'm hungry now";
+
+var reverseSentence = reverseBySeparator(string,""); //separator is an empty string
+var reverseEachWord = reverseBySeparator(reverseSentence," "); //spliiting string using a space
+
+function reverseBySeparator(string, separator){
+  var s = string.split(separator).reverse().join(separator); //split the input string into an array of words
+  console.log(string.split(separator));
+  console.log(string.split(separator).reverse());
+  console.log(string.split(separator).reverse().join(separator));
+  return s;
+}
