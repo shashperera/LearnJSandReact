@@ -59,8 +59,8 @@ function animal(name, color) {
     this.name = name;
     this.color = color;
 }
-var animall = animal("Cat", "White");
-// console.log(animall.name);
+var animall = new animal('Cat','White');
+console.log(animall.name);
 
 //4.4 Class implementation
 class Bird {
@@ -115,3 +115,17 @@ const Animal = {
     }
 };
 Animal.myMethod(); // this refers to myObject = Name
+
+//8. Callback function
+function test(arr, callback){
+    arr.push(100);
+    callback();
+    console.log(arr); //[1,4,5,10,100]
+}
+
+var arr= [1,4,5,10];
+console.log(arr); //[1,4,5,100]
+
+test(arr,function(){
+    console.log(arr+ "1") //1,4,5,1001
+});
