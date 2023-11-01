@@ -160,25 +160,54 @@ var addFive = Closure(5);
 console.log(addFive(10))
 addFive(6);
 
-//duplicate
+//11.duplicate
 function duplicate(arr){
     return arr.concat(arr);
 }
 console.log(duplicate([1,2,3,7]))
 
-//sort() anagram from 2 string
+//12.sort() anagram from 2 string
 var str1 = "Ramy";
 var str2 = "Mary";
 
 isAnagram(str1,str2);
 
 function isAnagram(first,second){
-    var a= first.toLowerCase();
-    var b= second.toLowerCase();
+    //upto here a, b undefined and first: Ramy, second:Mary
+    var a= first.toLowerCase(); //ramy
+    var b= second.toLowerCase(); //mary
 
-    a = a.split("").sort().join("");
-    b = b.split("").sort().join("");
-    console.log( a=== b);
+    a = a.split("").sort().join(""); //'amry'
+    b = b.split("") //['m','a','r','y']
+    b= b.sort() //to ascending order - //['a','m','r','y']
+    b = b.join(""); //'amry'
+
+    console.log( a=== b); //true
 
 }
 
+//12. undefined
+var y = 1;
+if (function x(){}){
+    y += typeof x;
+}
+
+console.log(y); //1undefined
+
+//12.1
+var x = 2;
+if(2){
+    eval(function p(){});
+    x += typeof p;
+}
+
+console.log(p);
+
+//12.2
+var c = 2;
+if(2){
+    function d(){}
+    c += typeof d;
+}
+
+console.log(c);
