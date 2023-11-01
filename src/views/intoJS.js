@@ -108,13 +108,13 @@ console.log(`${car2.name}'s maker is ${car1.maker}`); //Mercedes AMG One's maker
 
 //7. this
 //this keyword is a reference to the current execution context.
-const Animal = {
-    property: 'Name',
-    myMethod: function () {
-        console.log(this.property);
-    }
-};
-Animal.myMethod(); // this refers to myObject = Name
+// const Animal = {
+//     property: 'Name',
+//     myMethod: function () {
+//         console.log(this.property);
+//     }
+// };
+// Animal.myMethod(); // this refers to myObject = Name
 
 //8. Callback function
 //Functions which are passed as an argument in another function which gets executed after a certain
@@ -144,3 +144,41 @@ function reverseBySeparator(string, separator){
   console.log(string.split(separator).reverse().join(separator));
   return s;
 }
+
+
+//10. Closures
+//Keep the value passed to outerfunction Closure even after the ineer function is returned
+//Inner function being returned is created within an outer function,
+//making it a closure having access to variables within outer function(baseParameter)
+function Closure(baseParameter){
+    return function(B){
+        return baseParameter + B;
+    }
+}
+
+var addFive = Closure(5);
+console.log(addFive(10))
+addFive(6);
+
+//duplicate
+function duplicate(arr){
+    return arr.concat(arr);
+}
+console.log(duplicate([1,2,3,7]))
+
+//sort() anagram from 2 string
+var str1 = "Ramy";
+var str2 = "Mary";
+
+isAnagram(str1,str2);
+
+function isAnagram(first,second){
+    var a= first.toLowerCase();
+    var b= second.toLowerCase();
+
+    a = a.split("").sort().join("");
+    b = b.split("").sort().join("");
+    console.log( a=== b);
+
+}
+

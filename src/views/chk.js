@@ -1,13 +1,17 @@
-//string reverse
-var string = "I'm hungry now";
+var str1 = "Ramy";
+var str2 = "Mary";
 
-var reverseSentence = reverseBySeparator(string,""); //separator is an empty string
-var reverseEachWord = reverseBySeparator(reverseSentence," "); //spliiting string using a space
+isAnagram(str1,str2);
 
-function reverseBySeparator(string, separator){
-  var s = string.split(separator).reverse().join(separator); //split the input string into an array of words
-  console.log(string.split(separator));
-  console.log(string.split(separator).reverse());
-  console.log(string.split(separator).reverse().join(separator));
-  return s;
+function isAnagram(first,second){
+    var a= first.toLowerCase();
+    var b= second.toLowerCase();
+
+    a = a.split("").sort().join("");
+    b = b.split("")
+    b= b.sort()
+    b = b.join("");
+
+    console.log( a=== b);
+
 }
