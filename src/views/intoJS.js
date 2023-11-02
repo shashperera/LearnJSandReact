@@ -211,3 +211,11 @@ if(2){
 }
 
 console.log(c);
+
+//13. Closure 2
+function multiply(a){
+    return function (b){
+      return a*b;
+    }
+  }
+console.log(multiply(5)(6))
