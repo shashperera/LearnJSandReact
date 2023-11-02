@@ -160,6 +160,16 @@ var addFive = Closure(5);
 console.log(addFive(10))
 addFive(6);
 
+//10.2 Closure 2
+function multiply(a){
+    return function (b){
+      return a*b;
+    }
+  }
+console.log(multiply(5)(6)) //30
+
+
+
 //11.duplicate
 function duplicate(arr){
     return arr.concat(arr);
@@ -212,10 +222,61 @@ if(2){
 
 console.log(c);
 
-//13. Closure 2
-function multiply(a){
-    return function (b){
-      return a*b;
-    }
-  }
-console.log(multiply(5)(6))
+//13. add/change array elements
+let dailyActivities = [ 'eat', 'sleep'];
+
+// this will add the new element 'exercise' at the 2 index
+dailyActivities[1] = 'exercise';
+dailyActivities[3] = 'bou'; //
+
+console.log(dailyActivities); // [ 'eat', 'exercise', <1 empty item>, 'bou' ]
+
+//14.pop array, remove last elements
+let dailyActivities = ['work', 'eat', 'sleep', 'exercise'];
+
+// remove the last element
+dailyActivities.pop();
+console.log(dailyActivities); // ['work', 'eat', 'sleep']
+// remove the last element from ['work', 'eat', 'sleep']
+const removedElement = dailyActivities.pop();
+//get removed element
+console.log(removedElement); // 'sleep'
+console.log(dailyActivities);  // ['work', 'eat']
+
+
+//15. Map method
+//update an array or create a new array from an existing array
+//works like a for each loop
+var arr = [1,2,3,4];
+arr.map(updatearr)
+function updatearr(){}
+
+//16.Slice
+let dailyActivities = ['sleep', 'work', 'exercise']
+let newRoutine = ['eat'];
+
+// sorting elements in the alphabetical order
+dailyActivities.sort();
+console.log(dailyActivities); // ['exercise', 'sleep', 'work']
+
+//finding the index position of string
+const position = dailyActivities.indexOf('work');
+console.log(position); // 2
+
+// slicing the array elements,The slice() method returns selected elements in an array, as a new array.
+const newDailyActivities = dailyActivities.slice(2);
+console.log(newDailyActivities); // [ 'sleep', 'work']
+
+// concatenating two arrays
+const routine = dailyActivities.concat(newRoutine);
+console.log(routine); // ["exercise", "sleep", "work", "eat"]
+
+//16.2 slice
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(4);
+console.log(citrus);
+
+//17.
+
+
+

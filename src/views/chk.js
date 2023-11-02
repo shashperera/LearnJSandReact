@@ -1,15 +1,12 @@
-var x = 2;
-if(2){
-    eval(function p(){});
-    x += typeof p;
-}
+let dailyActivities = ['work', 'eat', 'sleep', 'exercise'];
 
-console.log(x);
+// remove the last element
+dailyActivities.pop();
+console.log(dailyActivities); // ['work', 'eat', 'sleep']
 
-var c = 2;
-if(2){
-    function d(){}
-    c += typeof d;
-}
+// remove the last element from ['work', 'eat', 'sleep']
+const removedElement = dailyActivities.pop();
 
-console.log(c);
+//get removed element
+console.log(removedElement); // 'sleep'
+console.log(dailyActivities);  // ['work', 'eat']
