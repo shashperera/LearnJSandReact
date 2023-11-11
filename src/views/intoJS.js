@@ -300,3 +300,11 @@ isLoggedIn && isAdminn && console.log("User is an admin.");
 //return first falsy operand,so nothing printed
 isAdminn && console.log("User is an admin.");
 
+
+//19. OR operator
+
+const s = isAdminn || console.log("User is an admin.");
+console.log(s)
+
+const p = isLoggedIn || isAdminn || console.log("User is an admin.");
+console.log(p)
