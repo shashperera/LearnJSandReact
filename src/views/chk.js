@@ -1,12 +1,10 @@
-let dailyActivities = ['work', 'eat', 'sleep', 'exercise'];
+let isLoggedIn = true;
+let isAdminn = false;
 
-// remove the last element
-dailyActivities.pop();
-console.log(dailyActivities); // ['work', 'eat', 'sleep']
+// both are true so left operand is printed
+isLoggedIn && console.log("User is logged in.");
 
-// remove the last element from ['work', 'eat', 'sleep']
-const removedElement = dailyActivities.pop();
-
-//get removed element
-console.log(removedElement); // 'sleep'
-console.log(dailyActivities);  // ['work', 'eat']
+// return first falsy operand if false
+isLoggedIn && isAdminn && console.log("User is an admin.");
+return(isLoggedIn && isAdminn && console.log("User is an admin."));
+isAdminn && console.log("User is an admin.");

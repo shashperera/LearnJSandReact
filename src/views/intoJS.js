@@ -276,7 +276,26 @@ const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 const citrus = fruits.slice(4);
 console.log(citrus);
 
-//17.
+//17. Convert true fale value into Boolean() function, double negation(!!)
+const value = '';
+const isTrue = !value;
 
+console.log(isTrue);
 
+//18. && logical AND operator,returns the first falsy operand if not the last operand if all are truthy
+result = "" && "foo"; // result is assigned "" (empty string)
+result = 2 && 0; // result is assigned 0
+result = "foo" && 4; // result is assigned 4
+
+//18.1
+let isLoggedIn = true;
+let isAdminn = false;
+
+// both are true so left operand is printed
+isLoggedIn && console.log("User is logged in.");
+
+// return first falsy operand if false
+isLoggedIn && isAdminn && console.log("User is an admin.");
+
+isAdminn && console.log("User is an admin.");
 
