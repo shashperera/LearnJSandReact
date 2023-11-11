@@ -297,5 +297,6 @@ isLoggedIn && console.log("User is logged in.");
 // return first falsy operand if false
 isLoggedIn && isAdminn && console.log("User is an admin.");
 
+//return first falsy operand,so nothing printed
 isAdminn && console.log("User is an admin.");
 
