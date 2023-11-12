@@ -308,3 +308,73 @@ console.log(s)
 
 const p = isLoggedIn || isAdminn || console.log("User is an admin.");
 console.log(p)
+
+//20. Unary operator (+)
+let x = "5";
+let y = +x;  // unary plus for string-to-number conversion
+console.log(y);  // Output: 5
+
+let z = true;
+let w = +z;  // unary plus for boolean-to-number conversion
+console.log(w);  // Output: 1
+
+//21. event.target and event.currentTarget refer to different elements involved in the event handling process.
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Event Example</title>
+//     <style>
+//         div {
+//             padding: 20px;
+//             border: 1px solid #aaa;
+//             margin: 10px;
+//             cursor: pointer;
+//         }
+//     </style>
+// </head>
+// <body>
+
+// <div id="outerDiv">
+//     <div id="innerDiv">
+//         Click me!
+//     </div>
+// </div>
+
+// <script>
+//     function handleEvent(event) {
+//         console.log("Event Target:", event.target.id);
+//         console.log("Event CurrentTarget:", event.currentTarget.id);
+//     }
+
+//     const outerDiv = document.getElementById('outerDiv');
+//     const innerDiv = document.getElementById('innerDiv');
+
+//     outerDiv.addEventListener('click', handleEvent);
+//     innerDiv.addEventListener('click', handleEvent);
+// </script>
+
+// </body>
+// </html>
+
+{/* Here's what happens: event.target: This property refers to the element that triggered the event. 
+It is the actual element that was clicked.
+event.currentTarget: This property refers to the element to which the event handler is attached. 
+It doesn't change as the event bubbles up or down the DOM hierarchy.
+In the handleEvent function, we log both event.target.id and event.currentTarget.id to the console.
+Open your browser's developer tools, and when you click on the inner div, you'll see the output in the console. 
+The target will be the inner div, and the currentTarget will be the outer div, as it is the element to which the event handler is attached. */}
+
+//22. Function Expression % arrow functions
+const multiply = function (x,y) {
+    x*y;
+}
+
+const res = multiply(3,2);
+console.log(res);
+
+const multiply2 = (a,b) => a*b;
+const res2 = multiply2(3,3);
+
+console.log(res2);
