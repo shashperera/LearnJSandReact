@@ -382,3 +382,159 @@ const multiply2 = (a,b) => a*b;
 const res2 = multiply2(3,3);
 
 console.log(res2);
+
+//23. Default Parameter
+//The power function has a default parameter (exponent = 2). If the exponent is not provided, it defaults to 2.
+//Two calls to the function are made, one with a single argument (3) and another with two arguments (3 and 4), resulting in different power calculations.
+function power(base, exponent = 2) {
+    return Math.pow(base, exponent);
+}
+
+const result1 = power(3);
+const result2 = power(3, 4);
+
+console.log(result1);  // Outputs: 9
+console.log(result2);  // Outputs: 81
+
+//24. Callback Function:
+// The fetchData function simulates an asynchronous data fetching operation using setTimeout. 
+// It takes a URL and a callback function. After a delay, it invokes the callback with simulated data. 
+// The fetchData function is then called with a URL and a callback that logs the received data to the console.
+function fetchData(url, callback) {
+    // Simulate fetching data from a URL
+    setTimeout(() => {
+        const data = { name: 'John', age: 30 };
+        callback(data);
+    }, 1000);
+}
+
+fetchData('https://example.com/api/data', (result) => {
+    console.log('Data received:', result);
+});
+
+//25. Fetch data in JS
+//Asynchronus fetch
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => {
+        // Check if the request was successful (status code 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Parse the response JSON
+        return response.json();
+    })
+    .then(data => {
+        // Process the data
+        console.log('Data:', data);
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+    });
+
+//Synchronous async/await
+async function fetchData() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+        
+        // Check if the request was successful (status code 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('Data:', data);
+    } catch (error) {
+        // Handle errors
+        console.error('Error:', error);
+    }
+}
+
+fetchData();
+
+//24. Async without await
+console.log('Start');
+
+setTimeout(() => {
+    console.log('Middle');
+}, 1000);
+
+console.log('End');
+
+//Async/await
+async function exampleAsyncFunction() {
+    console.log('Start');
+
+    // Simulate an asynchronous operation (e.g., fetching data)
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    console.log('Middle');
+    console.log('End');
+}
+
+exampleAsyncFunction();
+
+
+//25 this keyword usage
+//25.1 Regular Function and Global Object
+function showThis() {
+    console.log(this);
+}
+
+showThis(); // In a browser, 'this' refers to the global object (e.g., window)
+//In Node.js, it will be the global object for that environment.
+
+//25.2. Object Method
+const person = {
+    name: 'John',
+    greet: function() {
+        console.log(`Hello, ${this.name}!`);
+    }
+};
+
+person.greet(); // 'this' inside 'greet' method refers to the 'person' object
+
+//25.3. Constructor Function
+function Animal(name) {
+    this.name = name;
+    this.speak = function() {
+        console.log(`I am ${this.name}`);
+    };
+}
+
+const lion = new Animal('Lion');
+lion.speak(); // 'this' refers to the 'lion' instance
+//In a constructor function, this refers to the instance of the object being created.
+
+//25.4. Event Handler
+// //In an event handler, this often refers to the DOM element that triggered the event.
+// <button id="myButton">Click me</button>
+
+// <script>
+//     const button = document.getElementById('myButton');
+
+//     button.addEventListener('click', function() {
+//         console.log(this); // 'this' refers to the DOM element (button)
+//     });
+// </script>
+
+
+//25.5. Arrow Function
+const obj = {
+    data: 42,
+    getData: function() {
+        return () => {
+            console.log(this.data);
+        };
+    }
+};
+
+const getDataFunction = obj.getData();
+getDataFunction(); // 'this' in the arrow function refers to 'obj'
+
+//the arrow function inside getData captures the lexical scope of its surrounding function
+//, so this inside the arrow function still refers to the obj object
+
+
+
+

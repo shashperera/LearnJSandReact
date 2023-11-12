@@ -1,10 +1,11 @@
-let isLoggedIn = true;
-let isAdminn = false;
+function fetchData(url, callback) {
+    // Simulate fetching data from a URL
+    setTimeout(() => {
+        const data = { name: 'John', age: 30 };
+        callback(data);
+    }, 1000);
+}
 
-// both are true so left operand is printed
-isLoggedIn && console.log("User is logged in.");
-
-// return first falsy operand if false
-isLoggedIn && isAdminn && console.log("User is an admin.");
-return(isLoggedIn && isAdminn && console.log("User is an admin."));
-isAdminn && console.log("User is an admin.");
+fetchData('https://example.com/api/data', (result) => {
+    console.log('Data received:', result);
+});
