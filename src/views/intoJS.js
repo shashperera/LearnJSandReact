@@ -366,14 +366,18 @@ In the handleEvent function, we log both event.target.id and event.currentTarget
 Open your browser's developer tools, and when you click on the inner div, you'll see the output in the console. 
 The target will be the inner div, and the currentTarget will be the outer div, as it is the element to which the event handler is attached. */}
 
-//22. Function Expression % arrow functions
+//22. Function Expression & arrow functions
+//This example demonstrates a function expression assigned to the variable multiply. The function takes two parameters (x and y) and returns their product. 
+//The function is then invoked with the arguments 3 and 2, and the result is logged to the console. 
 const multiply = function (x,y) {
-    x*y;
+    return x*y;
 }
 
 const res = multiply(3,2);
 console.log(res);
 
+//An arrow function named add is defined, which adds two parameters (a and b).
+//The function is then invoked with the arguments 3 and 3, and the result is logged to the console.
 const multiply2 = (a,b) => a*b;
 const res2 = multiply2(3,3);
 
