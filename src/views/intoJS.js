@@ -536,5 +536,21 @@ getDataFunction(); // 'this' in the arrow function refers to 'obj'
 //, so this inside the arrow function still refers to the obj object
 
 
+//26. map, find, filter methods
+//map
+// The map method is used on the numbers array. It takes a callback function as an argument, which is applied to each element of the array. 
+// In this case, the callback function takes a number (num) as a parameter and returns its square (num * num).
+// The map method creates a new array, squaredNumbers, 
+// where each element is the result of applying the callback function to the corresponding element in the original array.
+const numbers = [1, 2, 3, 4, 5];
+
+const squaredNumbers = numbers.map(function (num) {
+  return num * num;
+});
+
+console.log(squaredNumbers); // Outputs: [1, 4, 9, 16, 25]
+
+
+
 
 
