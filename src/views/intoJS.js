@@ -586,3 +586,24 @@ console.log(user)
 //If no such element is found, it returns undefined.  
 
 
+//27. Hoisting
+//reading all defined variables or function declarations at the top of the scope before any other code execution occurs.
+//it allows us to call functions before they appear in code
+
+
+//28.Closures
+function createCounter() {
+    let count = 0;
+  
+    return function() {
+      count++;
+      console.log(count);
+    };
+  }
+  
+  const counter = createCounter();
+  counter(); // Outputs: 1
+  counter(); // Outputs: 2
+//   In this example, the createCounter function returns an inner function that has access to the count variable.
+//    Each time the inner function is called, it increments and logs the count. 
+//   The count variable is not directly accessible from outside createCounter, creating a form of encapsulation.  
