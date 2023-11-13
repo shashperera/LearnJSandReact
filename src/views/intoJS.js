@@ -557,14 +557,32 @@ console.log(squaredNumbers); // Outputs: [1, 4, 9, 16, 25]
 // In this case, the callback function takes a number (num),
 // as a parameter and returns true if the number is even (i.e., divisible by 2), and false otherwise.
 //The filter method creates a new array, evenNumbers, containing only the elements that satisfy the condition specified in the callback function.
-const numbers = [1, 2, 3, 4, 5];
+const numbers2 = [1, 2, 3, 4, 5];
 
-const evenNumbers = numbers.filter(function (num) {
+const evenNumbers = numbers2.filter(function (num) {
   return num % 2 === 0;
 });
 
 console.log(evenNumbers); // Outputs: [2, 4]
 
+//find
+const users = [
+    { id: 1, name: 'John' },
+    { id: 2, name: 'Jane' },
+    { id: 3, name: 'Doe' }
+  ];
+const user = users.find(function (user) {
+    return user.id === 2;
+//   return user.id === 5; //returns undefined
 
+});
+console.log(user)
+// The find method is used on the users array. It takes a callback function as an argument
+// , which is applied to each element of the array.
+//  In this case, the callback function takes a user as a parameter
+//   and returns true if the id property of the user is equal to 2, and false otherwise.
+
+//The find method searches through the array and returns the first element for which the callback function returns true. 
+//If no such element is found, it returns undefined.  
 
 
