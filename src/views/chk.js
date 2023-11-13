@@ -1,11 +1,6 @@
-function fetchData(url, callback) {
-    // Simulate fetching data from a URL
-    setTimeout(() => {
-        const data = { name: 'John', age: 30 };
-        callback(data);
-    }, 1000);
-}
+const numbers3 = [1, 2, 3, 4, 5];
+const sum = numbers3.reduce(function(acc, num) {
+  return acc + num;
+}, 0);
 
-fetchData('https://example.com/api/data', (result) => {
-    console.log('Data received:', result);
-});
+console.log(sum); // Outputs: 15

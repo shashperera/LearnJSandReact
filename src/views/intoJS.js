@@ -592,6 +592,9 @@ console.log(user)
 
 
 //28.Closures
+// A closure is a function along with its lexical scope, where the function has access to variables from its own scope, 
+// the scope of the outer function, and the global scope.
+
 function createCounter() {
     let count = 0;
   
@@ -607,3 +610,17 @@ function createCounter() {
 //   In this example, the createCounter function returns an inner function that has access to the count variable.
 //    Each time the inner function is called, it increments and logs the count. 
 //   The count variable is not directly accessible from outside createCounter, creating a form of encapsulation.  
+ 
+// This allows a function to "remember" its lexical scope even when the function is executed outside that scope.
+//  Closures are used to create private variables, encapsulation, and maintain state.
+
+//29. Higher order functions
+//Higher-order functions are functions that operate on other functions by taking them as arguments or returning them as results
+
+// Reduce function accumulates values based on a reducer function
+const numbers3 = [1, 2, 3, 4, 5];
+const sum = numbers3.reduce(function(acc, num) {
+  return acc + num;
+}, 0);
+
+console.log(sum); // Outputs: 15
