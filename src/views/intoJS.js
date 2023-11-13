@@ -538,6 +538,7 @@ getDataFunction(); // 'this' in the arrow function refers to 'obj'
 
 //26. map, find, filter methods
 //map
+//numbers is a constant, and its value (the array) cannot be reassigned.
 // The map method is used on the numbers array. It takes a callback function as an argument, which is applied to each element of the array. 
 // In this case, the callback function takes a number (num) as a parameter and returns its square (num * num).
 // The map method creates a new array, squaredNumbers, 
@@ -550,6 +551,19 @@ const squaredNumbers = numbers.map(function (num) {
 
 console.log(squaredNumbers); // Outputs: [1, 4, 9, 16, 25]
 
+//filter
+// The filter method is used on the numbers array.
+// It takes a callback function as an argument, which is applied to each element of the array.
+// In this case, the callback function takes a number (num),
+// as a parameter and returns true if the number is even (i.e., divisible by 2), and false otherwise.
+//The filter method creates a new array, evenNumbers, containing only the elements that satisfy the condition specified in the callback function.
+const numbers = [1, 2, 3, 4, 5];
+
+const evenNumbers = numbers.filter(function (num) {
+  return num % 2 === 0;
+});
+
+console.log(evenNumbers); // Outputs: [2, 4]
 
 
 
