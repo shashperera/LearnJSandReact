@@ -652,8 +652,44 @@ const multiply = function(x, y) {
   const greet = () => console.log("Hello!");
   
   // Arrow function with block body
-  const sum = (x, y) => {
+  const sum2 = (x, y) => {
     const result = x + y;
     return result;
   };
   
+//31. FUnctional components
+import React from 'react';
+
+const FunctionalComponent = (props) => {
+  return (
+    <div>
+      <p>{props.message}</p>
+    </div>
+  );
+};
+
+export default FunctionalComponent;
+
+
+//32. Class components
+
+import React, { Component } from 'react';
+
+class ClassComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: 'Hello from ClassComponent'
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>{this.state.message}</p>
+      </div>
+    );
+  }
+}
+
+export default ClassComponent;
