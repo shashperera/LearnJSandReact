@@ -147,7 +147,7 @@ function reverseBySeparator(string, separator){
 
 
 //10. Closures
-//Keep the value passed to outerfunction Closure even after the ineer function is returned
+//Keep the value passed to outerfunction Closure even after the inner function is returned
 //Inner function being returned is created within an outer function,
 //making it a closure having access to variables within outer function(baseParameter)
 function Closure(baseParameter){
@@ -615,7 +615,8 @@ function createCounter() {
 //  Closures are used to create private variables, encapsulation, and maintain state.
 
 //29. Higher order functions
-//Higher-order functions are functions that operate on other functions by taking them as arguments or returning them as results
+//Higher-order functions are functions that operate on other functions by taking them as
+// arguments or returning them as results
 
 // Reduce function accumulates values based on a reducer function
 const numbers3 = [1, 2, 3, 4, 5];
@@ -668,7 +669,7 @@ const FunctionalComponent = (props) => {
   );
 };
 
-export default FunctionalComponent;
+// export default FunctionalComponent;
 
 
 //32. Class components
@@ -692,4 +693,19 @@ class ClassComponent extends Component {
   }
 }
 
-export default ClassComponent;
+// export default ClassComponent;
+
+//33. Primitive & Reference objetcs
+// Primitive type example (string)
+let primitiveString1 = 'Hello';
+let primitiveString2 = primitiveString1;
+primitiveString2 = 'World';
+
+console.log(primitiveString1); // Output: Hello
+
+// Reference type example (object)
+let referenceObj1 = { name: 'John' };
+let referenceObj2 = referenceObj1;
+referenceObj2.name = 'Jane';
+
+console.log(referenceObj1.name); // Output: Jane
