@@ -624,3 +624,36 @@ const sum = numbers3.reduce(function(acc, num) {
 }, 0);
 
 console.log(sum); // Outputs: 15
+
+// 30. ECMAscript 6 (ES6) - arrow functions
+//function expression Traditional
+const fun = function (x,y) {
+    return x * y;    
+}
+
+//arrow function
+const func = (x,y)=> {
+    x * y ;
+}
+
+//30.1
+// Traditional function expression
+const multiply = function(x, y) {
+    return x * y;
+  };
+  
+  // Arrow function with multiple parameters
+  const multiplyArrow = (x, y) => x * y;
+  
+  // Arrow function with a single parameter and implicit return
+  const square = x => x * x;
+  
+  // Arrow function without parameters
+  const greet = () => console.log("Hello!");
+  
+  // Arrow function with block body
+  const sum = (x, y) => {
+    const result = x + y;
+    return result;
+  };
+  
