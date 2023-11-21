@@ -211,7 +211,7 @@ if(2){
     x += typeof p;
 }
 
-console.log(p);
+console.log(x);
 
 //12.2
 var c = 2;
@@ -265,7 +265,7 @@ console.log(position); // 2
 
 // slicing the array elements,The slice() method returns selected elements in an array, as a new array.
 const newDailyActivities = dailyActivities.slice(2);
-console.log(newDailyActivities); // [ 'sleep', 'work']
+console.log(newDailyActivities); // [ 'work']
 
 // concatenating two arrays
 const routine = dailyActivities.concat(newRoutine);
@@ -274,7 +274,7 @@ console.log(routine); // ["exercise", "sleep", "work", "eat"]
 //16.2 slice
 const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 const citrus = fruits.slice(4);
-console.log(citrus);
+console.log(citrus); //['Mango']
 
 //17. Convert true fale value into Boolean() function, double negation(!!)
 const value = '';
@@ -283,13 +283,15 @@ const isTrue = !value;
 console.log(isTrue);
 
 //18. && logical AND operator,returns the first falsy operand if not the last operand if all are truthy
-result = "" && "foo"; // result is assigned "" (empty string)
-result = 2 && 0; // result is assigned 0
-result = "foo" && 4; // result is assigned 4
+var resultt = "" && "foo"; // false and true, so result is assigned first falsy value, "" (empty string)
+console.log(resultt)
+resultt = 2 && 0; // both true so,result is assigned 0
+resultt = "foo" && 4; // both true so,result is assigned 4
 
 //18.1
 let isLoggedIn = true;
 let isAdminn = false;
+
 
 // both are true so left operand is printed
 isLoggedIn && console.log("User is logged in.");
@@ -709,3 +711,30 @@ let referenceObj2 = referenceObj1;
 referenceObj2.name = 'Jane';
 
 console.log(referenceObj1.name); // Output: Jane
+
+//34. Truthy or Falsy
+//34.1 ?
+function checkTruthyFalsy(value) {
+    return value ? 'Truthy' : 'Falsy';
+  }
+  
+  console.log(checkTruthyFalsy(0));      // Output: Falsy
+  console.log(checkTruthyFalsy('Hello')); // Output: Truthy
+
+//34.2 && with ||
+function checkTruthyFalsy(value) {
+    return value && 'Truthy' || 'Falsy';
+  }
+  
+  console.log(checkTruthyFalsy(0));      // Output: Falsy
+  console.log(checkTruthyFalsy('Hello')); // Output: Truthy
+  
+//34.3 Nested
+function checkNumber(value) {
+    return value > 0 ? 'Positive' : value < 0 ? 'Negative' : 'Zero';
+  }
+  
+  console.log(checkNumber(5));  // Output: Positive
+  console.log(checkNumber(-3)); // Output: Negative
+  console.log(checkNumber(0));  // Output: Zero
+  
