@@ -738,3 +738,37 @@ function checkNumber(value) {
   console.log(checkNumber(-3)); // Output: Negative
   console.log(checkNumber(0));  // Output: Zero
   
+
+var myObject = {
+    foo: "bar",
+    func: function () {
+        var self = this;
+        console.log("outer func: this.foo = " + this.foo);
+        console.log("outer func: self.foo = " + self.foo);
+        (function () {
+            console.log("inner func: this.foo = " + this.foo);
+            console.log("inner func: self.foo = " + self.foo);
+        }());
+    }
+};
+myObject.func();
+
+
+var arr1 = "john".split('');
+var arr2 = arr1.reverse();
+var arr3 = "jones".split('');
+arr2.push(arr3);
+console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+
+
+console.log(1 + "2" + "2"); //"122"
+console.log(1 + +"2" + "2");//"32"
+console.log(1 + -"1" + "2");//"02"
+console.log(+"1" + "1" + "2");//"112"
+console.log( "A" - "B" + "2");//"Nan2"
+console.log( "A" - "B" + 2);//Nan
+console.log( +"dude"); //Nan
+
+var a = (2, 3, 5);
+console.log(a)

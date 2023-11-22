@@ -1,3 +1,2 @@
-let dailyActivities = ['sleep', 'work', 'exercise', 'kdg']
-const newDailyActivities = dailyActivities.slice(2);
-console.log(newDailyActivities); // [ 'sleep', 'work']
+var a = (2, 3, 5);
+console.log(a)

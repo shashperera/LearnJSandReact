@@ -31,6 +31,32 @@ function App() {
     }
 
 
+
+    const styles={
+        grid: {
+            backgroundColor: '#0458',
+            display: 'grid',
+            padding: '20px',
+            gridGap:'20px',
+            gridColumnGap: '20px',
+            gridRowGap: '50px', // Adjusted grid row gap
+            gridTemplateColumns: 'repeat(3, 1fr)', // Adjusted grid columns
+            gridTemplateRows: 'repeat(3, 1fr)', // Adjusted grid columns
+        
+          },
+        
+          gridItem:{
+            backgroundColor: 'white',
+            fontSize: '20px',
+            padding: '20px',
+            textAlign: 'center',
+          },
+
+        Button:{
+
+        },
+    }
+
     return (
         <Router>
             <div className="App">
@@ -50,10 +76,12 @@ function App() {
                 {showGrid && <Grids />}
 
                 {!showReactHooks && !showOpenWindow && !showGrid && (
-                    <div>
-                        <button onClick={openReactHooks}>Open React Hooks Page</button>
-                        <button onClick={openNewComponent}>Difference between state and props in React.</button>
-                        <button onClick={openGrid}>Grids</button>
+                    <div style={styles.grid}>
+                        <button class='btn btn-warning' style={styles.gridItem}>jdj</button>
+                        <button style={styles.gridItem} onClick={openReactHooks}>Open React Hooks Page</button>
+                        <button  style={styles.gridItem} onClick={openNewComponent}>Difference between state and props in React.</button>
+                        <button  style={styles.gridItem} onClick={openGrid}>Grids</button>
+
                     </div>
                 )}
 

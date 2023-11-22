@@ -6,7 +6,7 @@ function MissedGoal(){
 }
 
 function Passed(){
-    return <h1>Passed</h1>
+    return <h1></h1>
 }
 function Goal(props){
     const isGoal = props.isGoal;
